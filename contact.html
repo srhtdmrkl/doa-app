@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - DOA App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .content-section h2 {
+            @apply text-2xl font-semibold text-slate-800 mt-8 mb-4;
+        }
+        .content-section p {
+            @apply text-slate-600 mb-4 leading-relaxed;
+        }
+        .content-section a {
+            @apply text-sky-600 hover:text-sky-700 underline;
+        }
+        /* Style for the iframe container to make it responsive */
+        .iframe-container {
+            @apply relative w-full overflow-hidden pt-[105.78%];
+        }
+        .iframe-container iframe {
+            @apply absolute top-0 left-0 w-full h-full;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-700">
+
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-sky-700">
+                <i class="fas fa-hard-hat mr-2"></i>DOA
+            </a>
+            <a href="index.html#download" class="px-6 py-2 bg-sky-600 text-white font-semibold rounded-lg shadow-md hover:bg-sky-700 transition-colors duration-300 text-sm">Back to App</a>
+        </div>
+    </nav>
+
+    <main class="container mx-auto px-6 py-12 md:py-16">
+        <article class="bg-white p-6 md:p-10 rounded-xl shadow-lg max-w-2xl mx-auto content-section">
+            <h1 class="text-3xl md:text-4xl font-bold text-slate-800 mb-8 text-center">Contact Us</h1>
+
+            <p class="text-center text-lg text-slate-600 mb-10">We'd love to hear from you! Please fill out the form below to send us a message, and we'll get back to you as soon as possible.</p>
+
+            <div>                
+                <div class="iframe-container mx-auto" style="max-width: 640px;">
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeUm47nEoKB2uPELBAkEI6em0FR8YOLAvkWr0RhtVisg36lNw/viewform?embedded=true" width="640" height="677" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                </div>
+                
+                <p class="text-center text-slate-500 mt-10 text-sm">
+                   // If you have any trouble with the form, you can also email us directly at <a href="mailto:support@doa-app.com" class="text-sky-600 hover:underline">support@doa-app.com</a>.
+                </p>
+            </div>
+        </article>
+    </main>
+
+    <footer class="bg-slate-800 text-slate-300 py-8">
+        <div class="container mx-auto px-6 text-center text-sm">
+            <p>&copy; <span id="currentYearFooter"></span> DOA App. All rights reserved.</p>
+            <p class="mt-2">
+                <a href="index.html" class="hover:text-sky-400">Home</a> |
+                <a href="privacy.html" class="hover:text-sky-400">Privacy Policy</a> |
+                <a href="terms.html" class="hover:text-sky-400">Terms of Use</a>
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Set current year in footer
+        document.getElementById('currentYearFooter').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
