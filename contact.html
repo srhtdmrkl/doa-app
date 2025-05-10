@@ -7,34 +7,14 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        .content-section h2 {
-            @apply text-2xl font-semibold text-slate-800 mt-8 mb-4;
-        }
-        .content-section p {
-            @apply text-slate-600 mb-4 leading-relaxed;
-        }
-        .content-section a {
-            @apply text-sky-600 hover:text-sky-700 underline;
-        }
-        /* Style for the iframe container to make it responsive */
-        .iframe-container {
-            @apply relative w-full overflow-hidden pt-[105.78%];
-        }
-        .iframe-container iframe {
-            @apply absolute top-0 left-0 w-full h-full;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-slate-50 text-slate-700">
 
     <nav class="bg-white shadow-md sticky top-0 z-50">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold text-sky-700">
-                <i class="fas fa-hard-hat mr-2"></i>DOA
+            <a href="index.html" class="text-2xl font-bold text-sky-700 flex items-center">
+                <img src="images/w035.png" alt="DOA Logo" class="h-8 w-auto mr-2">DOA
             </a>
             <a href="index.html#download" class="px-6 py-2 bg-sky-600 text-white font-semibold rounded-lg shadow-md hover:bg-sky-700 transition-colors duration-300 text-sm">Back to App</a>
         </div>
@@ -70,7 +50,6 @@
     </footer>
 
     <script>
-        // Set current year in footer
         document.getElementById('currentYearFooter').textContent = new Date().getFullYear();
     </script>
 

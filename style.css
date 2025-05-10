@@ -1,0 +1,138 @@
+/* Global Styles */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Navigation Styles (Common for all pages) */
+/* Nav styles are mostly handled by Tailwind classes directly in HTML,
+   but if specific overrides were in <style>, they'd go here.
+   The nav structure is consistent, so no page-specific nav styles needed here. */
+
+/* Hero Section Styles (from index.html) */
+.hero-section {
+    background: linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 31, 62, 0.9)), url('https://placehold.co/1920x1080/334155/e2e8f0?text=Industrial+Background') no-repeat center center;
+    background-size: cover;
+}
+
+/* General Section Styling (from index.html) */
+.section-title {
+    @apply text-3xl md:text-4xl font-bold text-center mb-4 text-slate-800;
+}
+
+.section-subtitle {
+    @apply text-center text-lg text-slate-600 mb-12 max-w-2xl mx-auto;
+}
+
+/* Component/Card Styles (from index.html) */
+.feature-card {
+    @apply bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300;
+}
+
+.feature-icon {
+    @apply text-4xl text-sky-600 mb-4;
+}
+
+.cta-button {
+    @apply px-8 py-3 bg-sky-600 text-white font-semibold rounded-lg shadow-md hover:bg-sky-700 transition-colors duration-300 text-lg;
+}
+
+.app-store-badge {
+    @apply inline-block h-12 md:h-14 mr-3 transition-transform duration-200 hover:scale-105;
+}
+
+.benefit-item {
+    @apply flex items-start space-x-3 p-4 bg-slate-50 rounded-lg;
+}
+
+.benefit-icon {
+    @apply fas fa-check-circle text-sky-500 text-xl mt-1 flex-shrink-0;
+}
+
+.testimonial-card {
+    @apply bg-slate-100 p-8 rounded-lg shadow-lg;
+}
+
+/* Animation (from index.html) */
+.floating-phone {
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Content Section Styles (Common for privacy.html, terms.html, contact.html) */
+.content-section h1 { /* Added for consistency if needed, matches privacy.html h1 */
+    @apply text-3xl md:text-4xl font-bold text-slate-800 mb-6 text-center;
+}
+
+.content-section h2 {
+    @apply text-2xl font-semibold text-slate-800 mt-8 mb-4;
+}
+
+.content-section h3 {
+    @apply text-xl font-semibold text-slate-700 mt-6 mb-3;
+}
+
+.content-section p {
+    @apply text-slate-600 mb-4 leading-relaxed;
+}
+
+.content-section ul {
+    @apply list-disc /* Sets list-style-type: disc */
+           [list-style-position:outside] /* Explicitly ensure bullets are outside */
+           text-slate-600
+           mb-4 /* Margin bottom for the list */
+           pl-5; /* Adjusted padding for outside bullets, ensure enough space */
+}
+
+.content-section ul li {
+    @apply [display:list-item]; /* Ensure li behaves as a list item */
+}
+
+.content-section ol {
+    @apply list-decimal /* Sets list-style-type: decimal */
+           [list-style-position:outside] /* Explicitly ensure bullets are outside */
+           text-slate-600
+           mb-4 /* Margin bottom for the list */
+           pl-5; /* Adjusted padding for outside bullets, ensure enough space */
+}
+
+.content-section ol li { /* Added for consistency with ul li */
+    @apply [display:list-item];
+}
+
+.content-section a {
+    @apply text-sky-600 hover:text-sky-700 underline;
+}
+
+/* Contact Page Specific Styles (from contact.html) */
+.iframe-container {
+    @apply relative w-full overflow-hidden pt-[105.78%]; /* Aspect ratio for the form */
+}
+
+.iframe-container iframe {
+    @apply absolute top-0 left-0 w-full h-full;
+}
+
+/* Footer Styles (Common for all pages) */
+/* Footer styles are mostly handled by Tailwind classes directly in HTML.
+   If specific overrides were in <style>, they'd go here.
+   The footer structure is consistent enough. */
+
+/*
+    Note on Tailwind @apply:
+    When using an external CSS file that's processed by Tailwind (e.g., via CLI or a build step),
+    @apply directives will work as expected.
+    If this style.css is NOT processed by Tailwind, @apply will not work,
+    and you would need to replace them with the actual utility classes or standard CSS.
+    However, since you're using the Tailwind CDN, the primary way to use Tailwind is via classes in HTML.
+    The <style> blocks with @apply were likely intended to be processed or were for organization.
+    For this extraction, I'm keeping @apply as it was in your original <style> blocks.
+    If style.css is just a static asset linked directly, these @apply rules will need to be
+    manually converted to standard CSS or the classes applied directly in HTML.
+    Assuming for now that if you had @apply in <style>, you have a way to process it or understand its implications.
+    If not, the best approach is to use Tailwind classes directly in HTML.
+*/
