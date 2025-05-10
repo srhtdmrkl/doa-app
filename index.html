@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOA - Dropped Object Assessment Mobile App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-section {
+            background: linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 31, 62, 0.9)), url('https://placehold.co/1920x1080/334155/e2e8f0?text=Industrial+Background') no-repeat center center;
+            background-size: cover;
+        }
+        .section-title {
+            @apply text-3xl md:text-4xl font-bold text-center mb-4 text-slate-800;
+        }
+        .section-subtitle {
+            @apply text-center text-lg text-slate-600 mb-12 max-w-2xl mx-auto;
+        }
+        .feature-card {
+            @apply bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300;
+        }
+        .feature-icon {
+            @apply text-4xl text-sky-600 mb-4;
+        }
+        .cta-button {
+            @apply px-8 py-3 bg-sky-600 text-white font-semibold rounded-lg shadow-md hover:bg-sky-700 transition-colors duration-300 text-lg;
+        }
+        .app-store-badge {
+            @apply inline-block h-12 md:h-14 mr-3 transition-transform duration-200 hover:scale-105;
+        }
+        .benefit-item {
+            @apply flex items-start space-x-3 p-4 bg-slate-50 rounded-lg;
+        }
+        .benefit-icon {
+            @apply fas fa-check-circle text-sky-500 text-xl mt-1 flex-shrink-0;
+        }
+        .accordion-item {
+            @apply border-b border-slate-200;
+        }
+        .accordion-header {
+            @apply flex justify-between items-center w-full py-5 text-left text-slate-700 font-medium hover:bg-slate-50 rounded-md;
+        }
+        .accordion-content {
+            @apply pb-5 px-5 text-slate-600;
+        }
+        .testimonial-card {
+            @apply bg-slate-100 p-8 rounded-lg shadow-lg;
+        }
+        .floating-phone {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-700">
+
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-sky-700">
+                <i class="fas fa-hard-hat mr-2"></i>DOA
+            </a>
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="#features" class="text-slate-600 hover:text-sky-600">Features</a>
+                <a href="#benefits" class="text-slate-600 hover:text-sky-600">Benefits</a>
+                <a href="#industries" class="text-slate-600 hover:text-sky-600">Industries</a>
+                <a href="#pricing" class="text-slate-600 hover:text-sky-600">Pricing</a>
+                <a href="#faq" class="text-slate-600 hover:text-sky-600">FAQ</a>
+            </div>
+            <a href="#download" class="cta-button hidden md:inline-block px-6 py-2 text-sm">Get Started</a>
+            <button id="mobile-menu-button" class="md:hidden text-slate-600">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+            <a href="#features" class="block py-2 px-6 text-slate-600 hover:bg-sky-50">Features</a>
+            <a href="#benefits" class="block py-2 px-6 text-slate-600 hover:bg-sky-50">Benefits</a>
+            <a href="#industries" class="block py-2 px-6 text-slate-600 hover:bg-sky-50">Industries</a>
+            <a href="#pricing" class="block py-2 px-6 text-slate-600 hover:bg-sky-50">Pricing</a>
+            <a href="#faq" class="block py-2 px-6 text-slate-600 hover:bg-sky-50">FAQ</a>
+            <a href="#download" class="block py-3 px-6 text-center bg-sky-600 text-white font-semibold hover:bg-sky-700 m-4 rounded-lg">Get Started</a>
+        </div>
+    </nav>
+
+    <header class="hero-section text-white py-20 md:py-32">
+        <div class="container mx-auto px-6 text-center">
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div class="text-left">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight">
+                        Prevent Dropped Object Incidents.
+                        <span class="block text-sky-400">Ensure Site Safety with DOA.</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-slate-200 mb-8 max-w-xl">
+                        DOA is the specialized mobile app empowering safety professionals to conduct, document, and manage dropped object hazard assessments with unparalleled accuracy and efficiency.
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-start items-start sm:items-center space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="#download" class="cta-button">Download the App</a>
+                        <a href="#features" class="px-8 py-3 bg-transparent border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-sky-700 transition-colors duration-300 text-lg">Learn More</a>
+                    </div>
+                    <div class="mt-10 flex justify-start space-x-3">
+                        <img src="https://placehold.co/135x40/ffffff/000000?text=App+Store" alt="App Store" class="app-store-badge" onerror="this.src='https://placehold.co/135x40/cccccc/000000?text=App+Store+Error'; this.onerror=null;"/>
+                        <img src="https://placehold.co/135x40/ffffff/000000?text=Google+Play" alt="Google Play" class="app-store-badge" onerror="this.src='https://placehold.co/135x40/cccccc/000000?text=Play+Store+Error'; this.onerror=null;"/>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <img src="https://placehold.co/400x700/000000/ffffff?text=DOA+App+Mockup" alt="DOA App Mockup" class="mx-auto rounded-2xl shadow-2xl floating-phone" onerror="this.src='https://placehold.co/400x700/cccccc/000000?text=App+Mockup+Error'; this.onerror=null;">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title">Stop Guesswork. Start Preventing.</h2>
+            <p class="section-subtitle">
+                Dropped objects pose a critical, often underestimated, risk in high-hazard industries. Traditional assessment methods can be time-consuming, inconsistent, and prone to error. DOA provides a robust, mobile-first solution.
+            </p>
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <div class="p-6">
+                    <div class="text-5xl text-red-500 mb-4"><i class="fas fa-exclamation-triangle"></i></div>
+                    <h3 class="text-xl font-semibold text-slate-800 mb-2">Complex Calculations? Simplified.</h3>
+                    <p class="text-slate-600">Instantly calculate impact energy and potential severity without complex spreadsheets or manual formulas.</p>
+                </div>
+                <div class="p-6">
+                    <div class="text-5xl text-yellow-500 mb-4"><i class="fas fa-folder-open"></i></div>
+                    <h3 class="text-xl font-semibold text-slate-800 mb-2">Inconsistent Documentation? Standardized.</h3>
+                    <p class="text-slate-600">Ensure every assessment is thorough and uniform with structured data entry and secure record-keeping.</p>
+                </div>
+                <div class="p-6">
+                    <div class="text-5xl text-green-500 mb-4"><i class="fas fa-shield-alt"></i></div>
+                    <h3 class="text-xl font-semibold text-slate-800 mb-2">Compliance Challenges? Mastered.</h3>
+                    <p class="text-slate-600">Generate professional reports to demonstrate due diligence and meet stringent safety regulations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="py-16 md:py-24 bg-slate-100">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title">Packed with Essential Safety Tools</h2>
+            <p class="section-subtitle">
+                DOA is engineered with the features you need to conduct effective dropped object assessments directly from your mobile device.
+            </p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-calculator"></i></div>
+                    <h3 class="text-xl font-semibold text-slate-800 mb-2">Dropped Object Calculator</h3>
+                    <p class="text-slate-600">Input mass, height, and object type to instantly determine potential impact energies and consequence levels.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-file-alt"></i></div>
+                    <h3 class="text-xl font-semibold text-slate-800 mb-2">Assessment & Documentation</h3>
+                    <p class="text-slate-600">Structured framework for recording location, hazards, existing controls, risk ratings, and corrective actions.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-file-pdf"></i></div>
+                    <h3 class="text-xl font-semibold text-slate-800 mb-2">Professional PDF Reports</h3>
+                    <p class="text-slate-600">Generate clear, comprehensive PDF reports of your assessments for sharing and record-keeping.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-cogs"></i></div>
+                    <h3 class="text-xl font-semibold text-slate-800 mb-2">Customizable Report Sections</h3>
+                    <p class="text-slate-600">Tailor PDF report structure to meet specific company or project requirements (Premium Feature).</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-wifi-slash"></i></div>
+                    <h3 class="text-xl font-semibold text-slate-800 mb-2">Offline Capability</h3>
+                    <p class="text-slate-600">Conduct assessments and save data locally, even without an internet connection. Sync when back online.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-globe-americas"></i></div>
+                    <h3 class="text-xl font-semibold text-slate-800 mb-2">Multi-Language Support</h3>
+                    <p class="text-slate-600">Designed for global teams with support for multiple languages, ensuring clarity for all users.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title">Safety Simplified: How DOA Works</h2>
+            <p class="section-subtitle">A modern Material 3 interface makes dropped object assessment intuitive and efficient.</p>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img src="https://placehold.co/600x450/e2e8f0/334155?text=DOA+App+Screens+Showcase" alt="DOA App Screens" class="rounded-xl shadow-xl mx-auto" onerror="this.src='https://placehold.co/600x450/cccccc/000000?text=App+Screens+Error'; this.onerror=null;">
+                </div>
+                <div class="space-y-6">
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0 w-12 h-12 bg-sky-600 text-white rounded-full flex items-center justify-center text-xl font-bold">1</div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-slate-800">Input Parameters</h3>
+                            <p class="text-slate-600">Easily enter object mass, drop height, and other relevant details into the intuitive calculator.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0 w-12 h-12 bg-sky-600 text-white rounded-full flex items-center justify-center text-xl font-bold">2</div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-slate-800">Calculate & Analyze</h3>
+                            <p class="text-slate-600">Instantly view impact energy, potential consequences, and risk levels based on your inputs.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0 w-12 h-12 bg-sky-600 text-white rounded-full flex items-center justify-center text-xl font-bold">3</div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-slate-800">Document Assessment</h3>
+                            <p class="text-slate-600">Record detailed findings, hazard descriptions, controls, and recommended actions in a structured format.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0 w-12 h-12 bg-sky-600 text-white rounded-full flex items-center justify-center text-xl font-bold">4</div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-slate-800">Generate & Share Reports</h3>
+                            <p class="text-slate-600">Create professional PDF reports for documentation, audits, and communication with stakeholders.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="benefits" class="py-16 md:py-24 bg-slate-100">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title">Elevate Your Safety Standards with DOA</h2>
+            <p class="section-subtitle">DOA isn't just an app; it's a commitment to a safer, more compliant, and more efficient workplace.</p>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="benefit-item">
+                    <i class="benefit-icon"></i>
+                    <div>
+                        <h3 class="text-lg font-semibold text-slate-800">Enhance Workplace Safety</h3>
+                        <p class="text-slate-600">Proactively identify and mitigate dropped object hazards, directly contributing to a safer environment for everyone.</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <i class="benefit-icon"></i>
+                    <div>
+                        <h3 class="text-lg font-semibold text-slate-800">Ensure Regulatory Compliance</h3>
+                        <p class="text-slate-600">Meet stringent industry safety regulations and internal standards with robust documentation and reliable calculations.</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <i class="benefit-icon"></i>
+                    <div>
+                        <h3 class="text-lg font-semibold text-slate-800">Improve Efficiency & Save Time</h3>
+                        <p class="text-slate-600">Streamline the entire assessment process, from on-site data capture to report generation, freeing up valuable time.</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <i class="benefit-icon"></i>
+                    <div>
+                        <h3 class="text-lg font-semibold text-slate-800">Strengthen Safety Culture</h3>
+                        <p class="text-slate-600">Empower your team with an easy-to-use tool that promotes safety awareness and proactive risk management.</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <i class="benefit-icon"></i>
+                    <div>
+                        <h3 class="text-lg font-semibold text-slate-800">Reliable On-Site Decision Making</h3>
+                        <p class="text-slate-600">Access immediate calculations and data to make informed safety decisions directly in the field.</p>
+                    </div>
+                </div>
+                <div class="benefit-item">
+                    <i class="benefit-icon"></i>
+                    <div>
+                        <h3 class="text-lg font-semibold text-slate-800">Protect Your Reputation & Bottom Line</h3>
+                        <p class="text-slate-600">Reduce incident rates, avoid costly fines and delays, and demonstrate a commitment to safety excellence.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="industries" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title">Built for Professionals in High-Risk Environments</h2>
+            <p class="section-subtitle">DOA is the trusted companion for safety leaders and field personnel across a range of critical industries.</p>
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 text-center">
+                <div class="p-4 bg-slate-100 rounded-lg shadow hover:shadow-md transition-shadow">
+                    <div class="text-3xl text-sky-600 mb-2"><i class="fas fa-hard-hat"></i></div>
+                    <p class="font-medium text-slate-700">Construction</p>
+                </div>
+                <div class="p-4 bg-slate-100 rounded-lg shadow hover:shadow-md transition-shadow">
+                    <div class="text-3xl text-sky-600 mb-2"><i class="fas fa-gas-pump"></i></div>
+                    <p class="font-medium text-slate-700">Oil & Gas</p>
+                </div>
+                <div class="p-4 bg-slate-100 rounded-lg shadow hover:shadow-md transition-shadow">
+                    <div class="text-3xl text-sky-600 mb-2"><i class="fas fa-industry"></i></div>
+                    <p class="font-medium text-slate-700">Manufacturing</p>
+                </div>
+                <div class="p-4 bg-slate-100 rounded-lg shadow hover:shadow-md transition-shadow">
+                    <div class="text-3xl text-sky-600 mb-2"><i class="fas fa-wind"></i></div>
+                    <p class="font-medium text-slate-700">Energy Sector</p>
+                </div>
+                <div class="p-4 bg-slate-100 rounded-lg shadow hover:shadow-md transition-shadow">
+                    <div class="text-3xl text-sky-600 mb-2"><i class="fas fa-ship"></i></div>
+                    <p class="font-medium text-slate-700">Maritime Ops</p>
+                </div>
+            </div>
+            <p class="text-center mt-10 text-lg text-slate-700">
+                Ideal for HSE Managers, Site Supervisors, Safety Inspectors, Maintenance Engineers, and Project Managers.
+            </p>
+        </div>
+    </section>
+
+    <section id="pricing" class="py-16 md:py-24 bg-sky-700 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Flexible Plans to Suit Your Needs</h2>
+            <p class="text-lg text-sky-100 mb-10 max-w-2xl mx-auto">
+                Start with essential dropped object assessment tools for free, or upgrade to Premium for advanced features and unlimited capabilities.
+            </p>
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="bg-white text-slate-800 p-8 rounded-xl shadow-2xl">
+                    <h3 class="text-2xl font-bold mb-2">Free Tier</h3>
+                    <p class="text-4xl font-extrabold text-sky-600 mb-4">$0 <span class="text-lg font-normal text-slate-500">/ forever</span></p>
+                    <ul class="space-y-3 text-left mb-8 text-slate-600">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Basic Dropped Object Calculator</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Limited Saved Assessments</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Standard PDF Report Generation</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Offline Access</li>
+                    </ul>
+                    <button class="w-full py-3 bg-slate-200 text-slate-700 font-semibold rounded-lg hover:bg-slate-300 transition-colors">
+                        Get Started Free
+                    </button>
+                </div>
+                <div class="bg-sky-800 text-white p-8 rounded-xl shadow-2xl border-4 border-sky-400 relative">
+                    <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-sky-400 text-white px-4 py-1 text-sm font-semibold rounded-full">MOST POPULAR</div>
+                    <h3 class="text-2xl font-bold mb-2">Premium Tier</h3>
+                    <p class="text-4xl font-extrabold text-sky-300 mb-4">Contact Us <span class="text-lg font-normal text-sky-100">/ for pricing</span></p>
+                     <ul class="space-y-3 text-left mb-8 text-sky-100">
+                        <li class="flex items-center"><i class="fas fa-check text-sky-300 mr-2"></i> All Free Features, PLUS:</li>
+                        <li class="flex items-center"><i class="fas fa-check text-sky-300 mr-2"></i> Unlimited Saved Assessments</li>
+                        <li class="flex items-center"><i class="fas fa-check text-sky-300 mr-2"></i> Advanced Calculation Features</li>
+                        <li class="flex items-center"><i class="fas fa-check text-sky-300 mr-2"></i> Full PDF Report Customization</li>
+                        <li class="flex items-center"><i class="fas fa-check text-sky-300 mr-2"></i> Cloud Storage & Sync</li>
+                        <li class="flex items-center"><i class="fas fa-check text-sky-300 mr-2"></i> Priority Support</li>
+                    </ul>
+                    <button class="w-full py-3 bg-sky-400 text-white font-semibold rounded-lg hover:bg-sky-500 transition-colors">
+                        Upgrade to Premium
+                    </button>
+                </div>
+            </div>
+            <p class="mt-10 text-sky-100">Premium features are unlocked via in-app subscriptions. Visit app stores for detailed pricing.</p>
+        </div>
+    </section>
+
+    <section class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title">Trusted by Safety Leaders</h2>
+            <p class="section-subtitle">Hear what professionals are saying about DOA (or what they're looking for in a solution like DOA).</p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="testimonial-card">
+                    <p class="text-slate-600 italic mb-6">"We needed an accurate and efficient tool for on-the-go safety assessments. DOA delivers reliable calculations and helps us maintain compliance effortlessly."</p>
+                    <div class="flex items-center">
+                        <img src="https://placehold.co/50x50/cbd5e1/475569?text=SM" alt="User Avatar" class="w-12 h-12 rounded-full mr-4" onerror="this.src='https://placehold.co/50x50/cccccc/000000?text=U1'; this.onerror=null;">
+                        <div>
+                            <p class="font-semibold text-slate-800">Safety Manager</p>
+                            <p class="text-sm text-slate-500">Construction Sector</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="text-slate-600 italic mb-6">"Reducing incident rates is our top priority. DOA's structured documentation and clear reporting are invaluable for our safety audits and continuous improvement efforts."</p>
+                    <div class="flex items-center">
+                        <img src="https://placehold.co/50x50/cbd5e1/475569?text=HS" alt="User Avatar" class="w-12 h-12 rounded-full mr-4" onerror="this.src='https://placehold.co/50x50/cccccc/000000?text=U2'; this.onerror=null;">
+                        <div>
+                            <p class="font-semibold text-slate-800">HSE Officer</p>
+                            <p class="text-sm text-slate-500">Oil & Gas Industry</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="text-slate-600 italic mb-6">"Finally, a mobile tool that understands the realities of field work. The offline capability and quick PDF generation save my team significant time and hassle."</p>
+                    <div class="flex items-center">
+                        <img src="https://placehold.co/50x50/cbd5e1/475569?text=SF" alt="User Avatar" class="w-12 h-12 rounded-full mr-4" onerror="this.src='https://placehold.co/50x50/cccccc/000000?text=U3'; this.onerror=null;">
+                        <div>
+                            <p class="font-semibold text-slate-800">Site Foreman</p>
+                            <p class="text-sm text-slate-500">Manufacturing Plant</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="py-16 md:py-24 bg-slate-100">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="max-w-3xl mx-auto" id="faq-accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span>What platforms does DOA support?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="accordion-content hidden">
+                        <p>DOA is a Flutter-based mobile application available for both Android and iOS platforms, ensuring a consistent experience across devices.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span>Can I use DOA offline?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="accordion-content hidden">
+                        <p>Yes! DOA is designed for field use. You can conduct assessments and save data locally without an internet connection. Premium users can sync their data to the cloud when they are back online.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span>How does the Premium subscription work?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="accordion-content hidden">
+                        <p>The Premium Tier is available via a monthly or annual subscription through in-app purchases (managed by RevenueCat). It unlocks advanced features like unlimited assessments, enhanced report customization, and cloud synchronization.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span>What kind of calculations does the app perform?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="accordion-content hidden">
+                        <p>DOA's calculator allows users to input parameters like object mass, drop height, and object characteristics to calculate potential impact energies and other relevant safety metrics to assess consequences.</p>
+                    </div>
+                </div>
+                 <div class="accordion-item">
+                    <button class="accordion-header">
+                        <span>Is my data secure?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="accordion-content hidden">
+                        <p>We take data security seriously. Data is stored locally on your device. For premium users, cloud synchronization uses secure protocols to protect your information. Please refer to our Privacy Policy for more details.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="download" class="py-20 md:py-32 bg-sky-600 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">Ready to Elevate Your Dropped Object Safety?</h2>
+            <p class="text-lg md:text-xl text-sky-100 mb-10 max-w-2xl mx-auto">
+                Download DOA today and join safety professionals worldwide in preventing incidents and building a stronger safety culture.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <img src="https://placehold.co/180x54/ffffff/000000?text=App+Store" alt="Download on the App Store" class="app-store-badge h-16" onerror="this.src='https://placehold.co/180x54/cccccc/000000?text=App+Store+Error'; this.onerror=null;">
+                <img src="https://placehold.co/180x54/ffffff/000000?text=Google+Play" alt="Get it on Google Play" class="app-store-badge h-16" onerror="this.src='https://placehold.co/180x54/cccccc/000000?text=Play+Store+Error'; this.onerror=null;">
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-800 text-slate-300 py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-semibold text-white mb-3"><i class="fas fa-hard-hat mr-2"></i>DOA</h3>
+                    <p class="text-sm">Specialized Mobile Application for Dropped Object Assessment. Enhancing workplace safety and compliance.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-3">Quick Links</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#features" class="hover:text-sky-400">Features</a></li>
+                        <li><a href="#benefits" class="hover:text-sky-400">Benefits</a></li>
+                        <li><a href="#pricing" class="hover:text-sky-400">Pricing</a></li>
+                        <li><a href="#faq" class="hover:text-sky-400">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-3">Legal</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-sky-400">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-sky-400">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-sky-400">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-slate-700 pt-8 text-center text-sm">
+                <p>&copy; <span id="currentYear"></span> DOA App. All rights reserved. Built to make workplaces safer.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                // Check if target is not just "#" (top of page) and actually exists
+                if (targetId.length > 1 && document.querySelector(targetId)) {
+                    document.querySelector(targetId).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // FAQ Accordion
+        const accordionItems = document.querySelectorAll('.accordion-item');
+        accordionItems.forEach(item => {
+            const header = item.querySelector('.accordion-header');
+            const content = item.querySelector('.accordion-content');
+            const icon = header.querySelector('i');
+
+            header.addEventListener('click', () => {
+                // Close other open items
+                accordionItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.querySelector('.accordion-content').classList.add('hidden');
+                        otherItem.querySelector('.accordion-header i').classList.remove('rotate-180');
+                        otherItem.querySelector('.accordion-header i').classList.add('fa-chevron-down');
+                        otherItem.querySelector('.accordion-header i').classList.remove('fa-chevron-up');
+
+                    }
+                });
+
+                // Toggle current item
+                content.classList.toggle('hidden');
+                icon.classList.toggle('rotate-180');
+                if (content.classList.contains('hidden')) {
+                    icon.classList.remove('fa-chevron-up');
+                    icon.classList.add('fa-chevron-down');
+                } else {
+                    icon.classList.remove('fa-chevron-down');
+                    icon.classList.add('fa-chevron-up');
+                }
+            });
+        });
+
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
