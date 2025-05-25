@@ -117,6 +117,85 @@ body {
     @apply absolute top-0 left-0 w-full h-full;
 }
 
+.page-header {
+    background: linear-gradient(rgba(12, 74, 110, 0.8), rgba(12, 74, 110, 0.9)), url('images/resources-page-header.png') no-repeat center center;
+    background-size: cover;
+}
+
+.content-card {
+            background-color: #ffffff; /* bg-white */
+            border-radius: 0.5rem; /* rounded-lg */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition-property: box-shadow;
+            transition-duration: 300ms;
+        }
+
+        .content-card:hover {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); /* hover:shadow-xl */
+        }
+
+        .content-card img {
+            width: 100%; /* w-full */
+            height: 12rem; /* h-48 */
+            object-fit: cover;
+        }
+
+        .content-card-body {
+            padding: 1.5rem; /* p-6 */
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1; /* Allows content to fill space and align link at bottom */
+        }
+
+        .content-card-title {
+            font-size: 1.25rem; /* text-xl */
+            line-height: 1.75rem;
+            font-weight: 700; /* font-bold */
+            color: #1e293b; /* text-slate-800 */
+            transition-property: color;
+            transition-duration: 300ms;
+            margin-bottom: 0.5rem; /* mb-2 */
+            text-decoration: none; /* Remove underline from link */
+        }
+
+        .content-card-title:hover {
+            color: #0ea5e9; /* hover:text-sky-600 */
+        }
+
+        .content-card-excerpt {
+            color: #475569; /* text-slate-600 */
+            line-height: 1.625; /* leading-relaxed */
+            margin-bottom: 1rem; /* mb-4 */
+            flex-grow: 1; /* Ensures this section expands, pushing link to bottom */
+        }
+
+        .content-card-link {
+            color: #0ea5e9; /* text-sky-600 */
+            font-weight: 600; /* font-semibold */
+            transition-property: color;
+            transition-duration: 300ms;
+            margin-top: auto; /* Pushes link to the bottom */
+            align-self: flex-start; /* Aligns link to bottom-left */
+            text-decoration: none; /* Remove underline from link */
+        }
+
+        .content-card-link:hover {
+            color: #0284c7; /* hover:text-sky-700 */
+        }
+
+        .content-card-link i {
+            transition-property: transform;
+            transition-duration: 300ms;
+            transition-timing-function: ease-in-out;
+        }
+
+        .content-card:hover .content-card-link i {
+            transform: translateX(0.25rem); /* translate-x-1, moves arrow on card hover */
+        }
+
 /* Footer Styles (Common for all pages) */
 /* Footer styles are mostly handled by Tailwind classes directly in HTML.
    If specific overrides were in <style>, they'd go here.
